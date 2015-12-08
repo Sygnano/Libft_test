@@ -1,0 +1,1 @@
+gcc -I ~/jde-maga/ Maintest/main.c ~/jde-maga/*.c ; /.a.out
