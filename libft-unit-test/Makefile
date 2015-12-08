@@ -6,7 +6,7 @@
 #    By: alelievr <alelievr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/04 19:22:36 by alelievr          #+#    #+#              #
-#    Updated: 2015/11/26 20:47:52 by alelievr         ###   ########.fr        #
+#    Updated: 2015/12/08 16:29:28 by jde-maga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 #################
 
 #	Libft Makefile path
-LIBFTDIR	=	../libft
+LIBFTDIR	=	~/jde-maga
 
 #	Sources
 SRCDIR		=	./src
@@ -32,8 +32,8 @@ OBJDIR		=	obj
 INCDIR		=	./include
 
 #	Libraries
-LIBDIR		=	
-LIBS		=	
+LIBDIR		=
+LIBS		=
 
 #	Assets
 ASSETDIR	=	assets
@@ -46,12 +46,12 @@ LIBMALLOC	=	malloc.dylib
 TMPLIB		=	$(ASSETDIR)/tmp
 WRAPNAME	=	$(ASSETDIR)/run_test
 
-FRAMEWORK	=	
+FRAMEWORK	=
 
 #	Compiler
 CFLAGS		=	-Werror -Wall -Wextra -g
 CSOFLAGS	=	-shared -fPIC
-CSOFLAGS2	=	
+CSOFLAGS2	=
 CC			=	clang
 
 #	Optimization
@@ -131,7 +131,7 @@ $(ASSETDIR)/$(LIBMALLOC):
 $(ASSETDIR)/$(ANAME):
 	@$(call exec_color, "\033[38;5;$(LINK_COLOR_T)m", make -C $(LIBFTDIR))
 	@$(call exec_color, "\033[38;5;$(LINK_COLOR_T)m", cp $(LIBFTDIR)/libft.a $(ASSETDIR)/)
-	
+
 shared:
 	@mkdir -p $(TMPLIB)
 	@cd $(TMPLIB) && ar -xv ../libft.a 1>/dev/null
